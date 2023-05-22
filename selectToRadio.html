@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change_img() {
+            var select = document.querySelector('input[name="radio_select"]:checked');
+            var img = document.getElementById("main_img");
+
+            if (select) {
+                img.src = select.value;
+                img.width = 700;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="amgs">
+        <input type="radio" name="radio_select" value="imgs/CLS53.jpg"> CLS53
+        <input type="radio" name="radio_select" value="imgs/E53.jpg"> E53
+        <input type="radio" name="radio_select" value="imgs/SL63.jpg"> SL63
+        <input type="radio" name="radio_select" value="imgs/GT63.jpg"> GT63
+        <input type="radio" name="radio_select" value="imgs/GTR.jpg"> GTR
+        <button type="button" onclick="change_img()">AMGS</button>
+        <br>
+        <img id="main_img" src="">
+    </form>
+</body>
+</html>
