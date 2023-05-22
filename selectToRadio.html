@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function change_img() {
-            var select = document.querySelector('input[name="radio_select"]:checked');
-            var img = document.getElementById("main_img");
+        var img;
+        function change_img(){
+            var radio_arr = document.getElementsByName("radio_select");
 
-            if (select) {
-                img.src = select.value;
-                img.width = 700;
+            for(var i = 0; i < radio_arr.length; i++){
+                if (radio_arr[i].checked){
+                    img.src = radio_arr[i].value;
+                }
             }
         }
+
+        function init(){
+            img = document.getElementById("main_img");
+            img.src = "imgs/CLS53.jpg";
+            img.width = 300;
+        }
+        // function change_img() {
+        //     var select = document.querySelector('input[name="radio_select"]:checked');
+        //     var img = document.getElementById("main_img");
+
+        //     if (select) {
+        //         img.src = select.value;
+        //         img.width = 700;
+        //     }
+        // }
     </script>
 </head>
 <body>
