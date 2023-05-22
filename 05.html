@@ -9,11 +9,14 @@
         var hEl;
         function nowClock(){
             hEl = document.getElementById("clock");
-            setInterval( function printClock(){
+            
+        }
+
+        setInterval(printClock, 1000);
+
+        function printClock(){
             var now = new Date();
             hEl.innerHTML = now.toString();
-        }, 1000);
-            
         }
 
        
